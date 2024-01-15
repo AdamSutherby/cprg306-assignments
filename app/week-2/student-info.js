@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export function StudentInfo() {
   return (
     <div>
         <p>Adam Sutherby</p>
         <p>
-            <a href="https://github.com/AdamSutherby">https://github.com</a>
+            <Link href="https://github.com/AdamSutherby">https://github.com</Link>
         </p>
     </div>
   );
