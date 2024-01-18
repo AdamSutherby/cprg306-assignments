@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Page() {
   return <main>
     <h1 className='text-2xl text-cyan-500 font-serif'>
-    CPRG306 Assignments
+    CPRG 306: Web Development 2 - Assignments
     </h1>
     <h2>by: Adam Sutherby</h2>
   <ul>
