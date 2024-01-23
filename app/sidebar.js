@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { RiNumber2, RiNumber3, RiNumber4, RiNumber5 } from "react-icons/ri";
+import './fonts/DS-DIGIT.ttf'
 
 
 export default function SideBar() {

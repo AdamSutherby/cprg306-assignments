@@ -1,4 +1,5 @@
 import SideBar from './sidebar.js';
+import './fonts/DS-DIGIT.ttf'
 
 export default function Page() {
   return <main>
