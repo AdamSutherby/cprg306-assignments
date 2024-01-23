@@ -21,46 +21,43 @@ export default function ItemList() {
   });
 
   const renderGroupedItems = () => {
-    const groupedItems = {};
-    sortedItems.forEach((item) => {
+    const groupedItems = sortedItems.reduce((acc, item) => {
       const category = item.category;
-      if (!groupedItems[category]) {
-        groupedItems[category] = [];
-      }
-      groupedItems[category].push(item);
-    });
+      acc[category] = [...(acc[category] || []), item];
+      return acc;
+    }, {});
 
     return Object.entries(groupedItems).map(([category, itemsInCategory]) => (
-      <div key={category}>
-        <h2 className="text-lg font-bold mb-2 capitalize px-4">{category}</h2>
-        {itemsInCategory.map((item) => (
-          <Item key={item.id} {...item} />
-        ))}
-      </div>
-    ));
-  };
+        <div key={category}>
+          <h2 className="text-lg font-bold mb-2 capitalize px-4">{category}</h2>
+          {itemsInCategory.map((item) => (
+            <Item key={item.id} {...item} />
+          ))}
+        </div>
+      ));
+    };
 
   return (
     <div>
-      <div>
-        <button
-          className={`bg-${sortBy === 'name' ? 'melrose-600' : 'melrose-500'} text-white font-bold py-2 px-4 rounded m-2`}
-          onClick={() => setSortBy('name')}
-        >
-          Sort by Name
-        </button>
-        <button
-          className={`bg-${sortBy === 'category' ? 'melrose-600' : 'melrose-500'} text-white font-bold py-2 px-4 rounded m-2`}
-          onClick={() => setSortBy('category')}
-        >
-          Sort by Category
-        </button>
-        <button
-          className={`bg-${sortBy === 'groupedCategory' ? 'melrose-600' : 'melrose-500'} text-white font-bold py-2 px-4 rounded m-2`}
-          onClick={() => setSortBy('groupedCategory')}
-        >
-          Sort by Grouped Category
-        </button>
+      <div className="pl-2">
+      <button
+  className={`${sortBy === 'name' ? 'bg-melrose-500' : 'bg-melrose-600'} text-white font-bold py-2 px-4 rounded m-2`}
+  onClick={() => setSortBy('name')}
+>
+  Sort by Name
+</button>
+<button
+  className={`${sortBy === 'category' ? 'bg-melrose-500' : 'bg-melrose-600'} text-white font-bold py-2 px-4 rounded m-2`}
+  onClick={() => setSortBy('category')}
+>
+  Sort by Category
+</button>
+<button
+  className={`${sortBy === 'groupedCategory' ? 'bg-melrose-500' : 'bg-melrose-600'} text-white font-bold py-2 px-4 rounded m-2`}
+  onClick={() => setSortBy('groupedCategory')}
+>
+  Sort by Grouped Category
+</button>
       </div>
 
       {sortBy === 'groupedCategory' ? (
