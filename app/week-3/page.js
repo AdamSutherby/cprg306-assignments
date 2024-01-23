@@ -4,9 +4,9 @@ import Item from './item.js';
 export default function Page() {
 
     return (
-      <main className="bg-slate-950">
+      <main className="bg-gradient-to-r from-comet-950 to-comet-500">
         <div>
-          <h2 className="font-bold text-3xl m-2">Shopping List</h2>
+          <h2 className="font-bold text-3xl m-2 p-2">Shopping List</h2>
           <ul>
             <CurrentItem />
           </ul>
