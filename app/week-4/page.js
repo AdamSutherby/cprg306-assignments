@@ -1,5 +1,4 @@
 import NewItem from './new-item.js';
-import onAdd from './new-item.js';
 
 export default function Page() {
     return (

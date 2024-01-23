@@ -25,3 +25,14 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@font-face {
+  font-family: 'DS-DIGIT'; /* Choose a name for your font */
+  src: url('./fonts/DS-DIGIT.ttf') format('truetype'); /* Adjust the path based on your project structure */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.DS-DIGIT {
+  font-family: DS-DIGIT;
+} 
