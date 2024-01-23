@@ -21,25 +21,25 @@ export default function SideBar() {
       <li className='flex flex-row group pt-10'>
         <Link href='week-2' className='flex items-center p-3 pt-8'>
           <SideBarIcon icon={<RiNumber2 size={40} />} />
-          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500 DS-DIGIT">Week 2</span>
+          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500">Week 2</span>
         </Link>
       </li>
       <li className='flex flex-row group'>
         <Link href='week-3' className='flex items-center p-3'>
           <SideBarIcon icon={<RiNumber3 size={40} />} />
-          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500 DS-DIGIT">Week 3</span>
+          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500">Week 3</span>
         </Link>
       </li>
       <li className='flex flex-row group'>
         <Link href='week-4' className='flex items-center p-3'>
           <SideBarIcon icon={<RiNumber4 size={40} />} />
-          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500 DS-DIGIT">Week 4</span>
+          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500">Week 4</span>
         </Link>
       </li>
       <li className='flex flex-row group'>
         <Link href='week-5' className='flex items-center p-3'>
           <SideBarIcon icon={<RiNumber5 size={40} />} />
-          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500 DS-DIGIT">Week 5</span>
+          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500">Week 5</span>
         </Link>
       </li>
     </ul>
