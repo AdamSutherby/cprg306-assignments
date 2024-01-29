@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { RiNumber2, RiNumber3, RiNumber4, RiNumber5 } from "react-icons/ri";
+import { RiNumber2, RiNumber3, RiNumber4, RiNumber5, RiNumber6 } from "react-icons/ri";
 
 
 export default function SideBar() {
@@ -40,6 +40,12 @@ export default function SideBar() {
         <Link href='week-5' className='flex items-center p-3'>
           <SideBarIcon icon={<RiNumber5 size={40} />} />
           <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500">Week 5</span>
+        </Link>
+      </li>
+      <li className='flex flex-row group'> 
+        <Link href='week-6' className='flex items-center p-3'>
+          <SideBarIcon icon={<RiNumber6 size={40} />} />
+          <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500">Week 6</span>
         </Link>
       </li>
     </ul>
