@@ -24,7 +24,7 @@ export default function ItemList({ items = [], onItemSelect }) {
     const categoryObject = categories.find(cat => cat.value === item.category);
     return { ...item, category: categoryObject ? categoryObject.label : item.category };
   });
-  
+
   const sortedItems = itemsWithCategory.sort((a, b) => {
     if (sortBy === 'name') {
       return a.name.localeCompare(b.name);
@@ -33,10 +33,6 @@ export default function ItemList({ items = [], onItemSelect }) {
       return a.category.localeCompare(b.category);
     }
     return a.quantity - b.quantity;
-  });
-  
-  const allItems = sortedItems.map((item, index) => {
-    return <Item key={index} item={item} onSelect={onItemSelect} />;
   });
 
   const renderGroupedItems = () => {
@@ -50,7 +46,7 @@ export default function ItemList({ items = [], onItemSelect }) {
         <div key={category}>
           <h2 className="text-lg font-bold mb-2 capitalize px-4">{category}</h2>
           {itemsInCategory.map((item) => (
-            <Item key={item.id} {...item} />
+            <Item key={item.id} {...item} onSelect={onItemSelect} />
           ))}
         </div>
       ));
@@ -85,7 +81,7 @@ export default function ItemList({ items = [], onItemSelect }) {
         renderGroupedItems()
       ) : (
         sortedItems.map((item) => (
-          <Item key={item.id} {...item} />
+          <Item key={item.id} {...item} onSelect={onItemSelect} />
         ))
       )}
     </div>
