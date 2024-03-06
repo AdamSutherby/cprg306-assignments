@@ -20,16 +20,18 @@ export default function Page() {
 
     return (
       <main className="bg-gradient-to-r from-comet-950 to-comet-500">
-        <div>
+          <div>
           <h2 className="font-bold text-3xl m-2 p-2">Shopping List</h2>
           <div>
           <NewItem items={items} setItems={setItems} />
           </div>
+          <div className='flex flex-row'>
           <ul>
           <ItemList items={items} onItemSelect={handleItemSelect} />
             </ul>
-        </div>
         <MealIdeas ingredient={selectedItem} />
+        </div>
+        </div>
       </main>
     );
   }
