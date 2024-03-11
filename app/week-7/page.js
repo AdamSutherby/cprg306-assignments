@@ -20,6 +20,7 @@ export default function Page() {
 
     return (
       <main className="bg-gradient-to-r from-comet-950 to-comet-500">
+        <div className = 'flex flex-row'>
           <div>
           <h2 className="font-bold text-3xl m-2 p-2">Shopping List</h2>
           <div>
@@ -30,6 +31,7 @@ export default function Page() {
           <ItemList items={items} onItemSelect={handleItemSelect} />
             </ul>
         <MealIdeas ingredient={selectedItem} />
+        </div>
         </div>
         </div>
       </main>
