@@ -10,10 +10,7 @@ export default function Page() {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemSelect = (ingredient) => {
-    const cleanedIngredient = ingredient.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|�[�-�]|�[�-�]|[\u2011-\u26FF]|�[�-�])/g, '');
-    console.log('item selected');
-    console.log(cleanedIngredient);
-    setSelectedItem(cleanedIngredient)
+    setSelectedItem(ingredient)
   };
 
   
