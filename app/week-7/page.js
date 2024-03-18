@@ -4,27 +4,12 @@ import ItemList from './item-list.js';
 import NewItem from './new-item.js';
 import MealIdeas from './meal-ideas.js';
 import { useState } from 'react';
-import { useUserAuth } from "./_utils/auth-context";
+
 
 export default function Page() {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
-  const { user, firebaseSignOut } = useUserAuth();
-
-  if (!user) {
-    return (
-      <div>
-        <h1 className='text-2xl content-center'>WOAH COWBOY!</h1>
-        <p className='text-lg content-center'>You need to sign in to use this app</p>
-        <button
-          className="w-24 p-2 m-2 ml-16 bg-blue-500 text-white rounded hover:bg-blue-900"
-          onClick={() => (location.href = "/week-8")}
-        >
-          Go back to where you belong
-        </button>
-      </div>
-    );
-  }
+  
 
   const handleItemSelect = (ingredient) => {
     const cleanedIngredient = ingredient.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|�[�-�]|�[�-�]|[\u2011-\u26FF]|�[�-�])/g, '');
