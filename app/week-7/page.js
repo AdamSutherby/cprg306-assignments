@@ -14,12 +14,13 @@ export default function Page() {
   if (!user) {
     return (
       <div>
-        <h1>Please log in to view your shopping list.</h1>
+        <h1 className='text-2xl content-center'>WOAH COWBOY!</h1>
+        <p className='text-lg content-center'>You need to sign in to use this app</p>
         <button
-          className="w-24 p-2 m-2 ml-16 bg-orange-500 text-white rounded hover:bg-orange-900"
+          className="w-24 p-2 m-2 ml-16 bg-blue-500 text-white rounded hover:bg-blue-900"
           onClick={() => (location.href = "/week-8")}
         >
-          Sign in page
+          Go back to where you belong
         </button>
       </div>
     );
