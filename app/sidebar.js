@@ -17,6 +17,8 @@ export default function SideBar() {
   };
 
   return (
+    <div className='flex flex-row'>
+    <div>
     <ul className="fixed top-0 left-0 h-screen w-1/8 m-0 flex flex-col shadow-lg justify-start">
       <li className='flex flex-row group pt-10'>
         <Link href='week-2' className='flex items-center p-3 pt-8'>
@@ -42,6 +44,10 @@ export default function SideBar() {
           <span className="ml-2 text-3xl opacity-0 group-hover:opacity-100 transition-opacity p-2 text-green-500">Week 5</span>
         </Link>
       </li>
+      </ul>
+      </div>
+      <div className="flex justify-center"style={{marginLeft: "50%"}}>
+        <ul className="fixed top-15 h-screen w-1/8 m-0 flex flex-col shadow-lg justify-start">
       <li className='flex flex-row group'> 
         <Link href='week-6' className='flex items-center p-3'>
           <SideBarIcon icon={<RiNumber6 size={40} />} />
@@ -61,5 +67,7 @@ export default function SideBar() {
         </Link>
       </li>
     </ul>
+    </div>
+    </div>
   );
 }

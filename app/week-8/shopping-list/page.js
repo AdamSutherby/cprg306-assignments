@@ -13,7 +13,7 @@ export default function Page() {
 
   if (!user) {
     return (
-      <div>
+      <div className='flex absolute justify-center align-middle flex-col'>
         <h1 className='m-2 text-2xl content-center'>WOAH COWBOY!</h1>
         <p className='m-2 text-lg content-center'>You need to sign in to use this app</p>
         <button
